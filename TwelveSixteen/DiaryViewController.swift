@@ -18,6 +18,8 @@ class DiaryViewController: UITableViewController {
         
         self.navigationController?.navigationBar.isHidden = true
         self.tableView.register(UINib(nibName: "DiaryEditViewCell", bundle: nil), forCellReuseIdentifier: ReuseIdentifier)
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 313
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,8 +47,8 @@ class DiaryViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 400
-    }
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 400
+//    }
 
 }

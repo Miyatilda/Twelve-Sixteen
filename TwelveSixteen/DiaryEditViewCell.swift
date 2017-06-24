@@ -15,6 +15,12 @@ class DiaryEditViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        // TODO: delete
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.red.cgColor
+        
+        self.setupTextFields()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -48,7 +54,27 @@ class DiaryEditViewCell: UITableViewCell {
 }
 
 
-extension DiaryEditViewCell: UITextFieldDelegate
-{
+extension DiaryEditViewCell: UITextFieldDelegate {
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+
+fileprivate extension DiaryEditViewCell {
+    
+    func setupTextFields() {
+        let textfields: [UITextField] = [self.goodThingTextField,
+                                         self.bedThingTextField,
+                                         self.goodFeelingTextField,
+                                         self.bedFeelingTextField,
+                                         self.commentsTextField]
+        
+        for textField in textfields {
+            textField.returnKeyType = .done
+            textField.delegate = self
+        }
+    }
 }
