@@ -1,10 +1,11 @@
-//
-//  AppDelegate.swift
-//  TwelveSixteen
-//
-//  Created by Seungmi Jeong on 2017. 6. 24..
-//  Copyright © 2017년 Seungmi Jeong. All rights reserved.
-//
+/*
+ *  AppDelegate.swift
+ *  TwelveSixteen
+ *
+ *  Created by Seungmi Jeong on 2017. 6. 24..
+ *  Copyright © 2017 Seungmi Jeong. All rights reserved.
+ *
+ */
 
 import UIKit
 import CoreData
